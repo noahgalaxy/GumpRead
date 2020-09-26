@@ -1,6 +1,6 @@
 <template>
     <div id="profile-item">
-        <v-list-item @click="profileItemClick" class="d-flex justify-start">
+        <v-list-item @click="profileItemClick" class="d-flex justify-start" color="purple">
             <v-list-item-icon class="ml-2 ">
                 <slot  name="profileItemIcon"></slot>
             </v-list-item-icon>

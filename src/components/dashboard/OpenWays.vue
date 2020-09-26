@@ -1,5 +1,9 @@
 <template>
-    $END$
+    <div id="open-ways">
+        <v-card width="500" class="mx-auto" tile flat>
+            <slot></slot>
+        </v-card>
+    </div>
 </template>
 
 <script>
