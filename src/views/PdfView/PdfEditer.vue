@@ -91,7 +91,7 @@
                 let pdfUrl = '/A robust zero-watermarking algorithm for color image.pdf';
 
                 // PDFJS.workerSrc = require('pdfjs-dist/build/pdf.worker')
-                PDFJS.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.js`;
+                PDFJS.GlobalWorkerOptions.workerSrc = '/pdf.worker.js';
                 PDFJS.cMapUrl= 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.288/cmaps/' // include "/"
                 PDFJS.cMapPacked= true // set cMapPacked = true to ignore Warning: Ignoring invalid character "121" in hex string
 

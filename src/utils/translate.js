@@ -6,7 +6,7 @@ export function transToEng(text) {
     };
     return request({
         url: 'translate/toEng',
-        method: 'get',
+        method: 'post',
         data: data
     })
 }
