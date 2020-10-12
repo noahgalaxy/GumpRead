@@ -103,6 +103,9 @@
                 PDFJS.cMapUrl= 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.288/cmaps/' // include "/"
                 PDFJS.cMapPacked= true // set cMapPacked = true to ignore Warning: Ignoring invalid character "121" in hex string
 
+
+
+
                 let loadingTask = PDFJS.getDocument(pdfUrl);
                 loadingTask.promise.then(pdf => {
                     let totalPage = pdf.numPages
