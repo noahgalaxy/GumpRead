@@ -1,20 +1,25 @@
 <template>
     <div id="showPdf" class="bgk">
+<!--        顶部导航栏-->
         <dashboard-nav-bar></dashboard-nav-bar>
-<!--            <div id="left-side-bar">-->
-<!--                <div style="height: 100px"></div>-->
-<!--            </div>-->
-
+<!--        左边工具栏-->
         <left-side-drawer></left-side-drawer>
-            <div class="main_content" id="mainContent" ref="mainContent">
-                <div v-for="item in totals" :id="`page-${item}`" :key="item" class="pdf-box">
-                    <canvas :id="'canvas-pdf-' + item" class="canvas-pdf"></canvas>
-                </div>
+<!--        中间显示pdf-->
+        <div class="main_content" id="mainContent" ref="mainContent">
+            <div v-for="item in totals" :id="`page-${item}`" :key="item" class="pdf-box">
+                <canvas :id="'canvas-pdf-' + item" class="canvas-pdf"></canvas>
             </div>
-        <div id="right-side-bar">
-            <right-side-box></right-side-box>
         </div>
 
+<!--        右边翻译按钮代替翻译栏-->
+        <div class="fixed-translate-btn">
+            <right-side-buttom-box></right-side-buttom-box>
+        </div>
+
+<!--        右边显示翻译栏-->
+<!--        <div id="right-side-bar">-->
+<!--            <right-side-box></right-side-box>-->
+<!--        </div>-->
     </div>
 </template>
 
@@ -40,6 +45,7 @@
     import DashboardNavBar from "../../components/dashboard/DashboardNavBar";
     import LeftSideDrawer from "../../components/pdfView/leftSideDrawer/LeftSideDrawer";
     import RightSideBox from "../../components/pdfView/rightSide/RightSideBox";
+    import RightSideButtomBox from "../../components/pdfView/rightSide/RightSideButtomBox";
 
     import {
         mdiIdeogramCjkVariant,
@@ -56,6 +62,7 @@
             DashboardNavBar,
             LeftSideDrawer,
             RightSideBox,
+            RightSideButtomBox
         },
         data () {
             return {
@@ -69,6 +76,7 @@
                 icons:{
                     mdiIdeogramCjkVariant,
                     mdiLinkVariant,
+
                 },
             }
         },
@@ -213,7 +221,7 @@
 
     #right-side-bar{
         background-color: white;
-        width: 30%;
+        width: 15%;
         height: 100%;
         float: right;
         position: fixed;
@@ -230,6 +238,13 @@
 
     .button-no-bgk{
         background-color: grey;
+    }
+
+    .fixed-translate-btn{
+        margin-top: 10%;
+        float: right;
+        right: 20px;
+        position: fixed;
     }
 
 </style>
